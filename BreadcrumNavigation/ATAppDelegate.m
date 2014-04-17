@@ -7,12 +7,20 @@
 //
 
 #import "ATAppDelegate.h"
+#import "ATBreadcrumController.h"
+#import "ATFirstViewController.h"
+#import "ATSecondViewController.h"
+#import "ATThirdViewController.h"
 
 @implementation ATAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[ATBreadcrumController alloc] initWithViewControllers:@[[[ATFirstViewController alloc] init],
+                                                                                              [[ATSecondViewController alloc] init],
+                                                                                              [[ATThirdViewController alloc] init]]];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

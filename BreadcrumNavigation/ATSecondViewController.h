@@ -1,5 +1,5 @@
 //
-//  ATViewController.h
+//  ATSecondViewController.h
 //  BreadcrumNavigation
 //
 //  Created by Akbar Nurlybayev on 2014-04-16.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ATBreadcrumController.h"
 
-@interface ATViewController : UIViewController
+@interface ATSecondViewController : UIViewController <ATBreadcrumDataSource>
 
 @end
